@@ -1,7 +1,7 @@
 from celery import Celery
 from time import sleep
 
-app = Celery('tasks', broker='localhost', backend='db+sqlite:///db.sqlite3')
+app = Celery('tasks', broker='rabbitmq', backend='db+sqlite:///db.sqlite3')
 
 @app.task
 def reverse(text):

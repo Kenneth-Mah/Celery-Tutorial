@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  celery-tutorial:
+    build: 
+      dockerfile: Dockerfile
+    command: ["tail -f /dev/null"]
+    volumes:
+      - ..:/celery-tutorial
+
+  celery:
+    
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine

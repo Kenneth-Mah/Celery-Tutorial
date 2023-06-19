@@ -1,0 +1,18 @@
+{
+    "name": "celery-tutorial",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "celery-tutorial",
+    "workspaceFolder": "/celery-tutorial",
+
+    "postCreateCommand": "pip3 install --user -r .devcontainer/requirements.txt",
+
+    "customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			]
+		}
+	}
+}
